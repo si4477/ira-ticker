@@ -1,0 +1,16 @@
+.ira_ticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 24px;
+}
+
+#output_loss {
+  font-weight: bold;
+}
+
+#employment_loss {
+  font-weight: bold;
+}
