@@ -1,13 +1,13 @@
 /* Set the base value, base date, and growth rate per
    second for output */
 var output_base = 100,
-    output_base_date = new Date("2025-03-26T20:00:00"),
+    output_base_date = new Date("2025-03-28T08:00:00"),
     output_growth = 0.0001;
 
 /* Set the base value and growth rate per
    second for employment */
 var employment_base = 200,
-    employment_base_date = new Date("2025-03-26T20:00:00"),
+    employment_base_date = new Date("2025-03-28T08:00:00"),
     employment_growth = 0.0001;
 
 // Function to update the IRA ticker
@@ -23,8 +23,8 @@ function updateIRATicker() {
   var employment_loss = employment_base * (1 + employment_growth) ** time_difference_seconds;
 
   // Update the HTML elements
-  document.getElementById("output_loss").innerHTML = '$' +output_loss.toFixed(2);
-  document.getElementById("employment_loss").innerHTML = employment_loss.toFixed(0) + ' jobs';
+  document.getElementById("output_loss").innerHTML = '$' + output_loss.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById("employment_loss").innerHTML = employment_loss.toLocaleString('en-US', {maximumFractionDigits: 0}) + ' jobs';
 }
 
 // Initialize the ticker values
