@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  row-gap: 20px;
   height: 100vh;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 #output_loss {
@@ -12,5 +13,9 @@
 }
 
 #employment_loss {
+  font-weight: bold;
+}
+
+#labor_income_loss {
   font-weight: bold;
 }
