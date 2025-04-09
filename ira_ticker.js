@@ -32,9 +32,9 @@ function updateIRATicker() {
   var labor_income_loss = labor_income_base + (time_difference_seconds * labor_income_growth);
 
   // Update the HTML elements
-  document.getElementById("output_loss").innerHTML = '$' + output_loss.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById("output_loss").innerHTML = '$' + output_loss.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
   document.getElementById("employment_loss").innerHTML = employment_loss.toLocaleString('en-US', {minimumFractionDigits: 3, maximumFractionDigits: 3}) + ' jobs';
-  document.getElementById("labor_income_loss").innerHTML = '$' + labor_income_loss.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  document.getElementById("labor_income_loss").innerHTML = '$' + labor_income_loss.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
 }
 
 // Initialize the ticker values
