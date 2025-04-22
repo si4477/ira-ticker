@@ -8,16 +8,24 @@
   justify-content: center;
   row-gap: 20px;
   font-size: 26px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #6e6c6b;
 }
 
 #output_loss {
-  font-weight: bold;
+  color: #1d468d;
+  font-weight: 700;
 }
 
 #employment_loss {
-  font-weight: bold;
+  color: #1d468d;
+  font-weight: 700;
 }
 
 #labor_income_loss {
-  font-weight: bold;
+  color: #1d468d;
+  font-weight: 700;
 }

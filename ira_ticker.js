@@ -1,19 +1,19 @@
 /* Set the base value, base date, and growth per
    second for economic output */
-var output_base = 839548792.06,
-    output_base_date = new Date("2025-04-07T16:15:00"),
+var output_base = 990237036.79,
+    output_base_date = new Date("2025-04-21T16:15:00"),
     output_growth = 124.58;
 
 /* Set the base value, base date, and growth per
    second for employment (jobs) */
-var employment_base = 4062,
-    employment_base_date = new Date("2025-04-07T16:15:00"),
+var employment_base = 4791,
+    employment_base_date = new Date("2025-04-21T16:15:00"),
     employment_growth = 0.0006;
 
 /* Set the base value, base date, and growth per
    second for labor income */
-var labor_income_base = 301119774.44,
-    labor_income_base_date = new Date("2025-04-07T16:15:00"),
+var labor_income_base = 355166913.44,
+    labor_income_base_date = new Date("2025-04-21T16:15:00"),
     labor_income_growth = 44.68;
 
 // Function to update the IRA ticker
