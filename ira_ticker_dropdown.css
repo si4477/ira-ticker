@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   row-gap: 20px;
-  font-size: 26px;
+  font-size: 22px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -15,8 +15,15 @@
   color: #6e6c6b;
 }
 
+#output_label {
+  font-size: 32px;
+  font-weight: 700;
+}
+
 #output_loss {
+  margin-bottom: 50px;
   color: #1d468d;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -31,7 +38,7 @@
 }
 
 .agency_dropdown_container {
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
