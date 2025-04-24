@@ -1,6 +1,6 @@
 .ira_ticker {
   width: 100%;
-  max-width: 1000px;
+  max-width: 600px;
   margin: 30px auto;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,11 @@
   font-weight: 700;
 }
 
+#job_days_loss {
+  color: #1d468d;
+  font-weight: 700;
+}
+
 #employment_loss {
   color: #1d468d;
   font-weight: 700;
@@ -35,4 +40,26 @@
 #labor_income_loss {
   color: #1d468d;
   font-weight: 700;
+}
+
+div.methodology {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+div.methodology > span {
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  font-size: 14px;
+  color: #1d468d;
+  background-color: #f2f0ef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+div.methodology > span:hover {
+  background-color: #ddd;
 }
