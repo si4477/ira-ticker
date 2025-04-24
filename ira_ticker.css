@@ -16,14 +16,14 @@
 }
 
 #output_label {
-  font-size: 32px;
+  font-size: 50px;
   font-weight: 700;
 }
 
 #output_loss {
   margin-bottom: 50px;
   color: #1d468d;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -40,26 +40,4 @@
 #labor_income_loss {
   color: #1d468d;
   font-weight: 700;
-}
-
-div.methodology {
-  width: 100%;
-  margin-top: 50px;
-  text-align: center;
-}
-
-div.methodology > span {
-  width: 100%;
-  padding: 10px;
-  text-align: right;
-  font-size: 14px;
-  color: #1d468d;
-  background-color: #f2f0ef;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-div.methodology > span:hover {
-  background-color: #ddd;
 }
