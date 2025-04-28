@@ -32,12 +32,50 @@
   font-weight: 700;
 }
 
-#employment_loss {
+#labor_income_loss {
   color: #1d468d;
   font-weight: 700;
 }
 
-#labor_income_loss {
+.agency_dropdown_container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agency_dropdown_container label {
+  font-size: 18px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.agency_dropdown_container select {
+  width: 80px;
+  border: none;
+  outline: none;
+  background-color: #f2f0ef;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
   color: #1d468d;
-  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.agency_dropdown_select_container::after {
+  content: "▼";
+  position: relative;
+  right: 25px;
+  color: #1d468d;
+  pointer-events: none;
+  font-size: 12px;
+}
+
+.at_risk {
+  font-size: 18px;
+  font-weight: 300;
 }
