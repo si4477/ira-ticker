@@ -75,7 +75,13 @@
   font-size: 12px;
 }
 
-.at_risk {
+#atrisk_label {
   font-size: 18px;
   font-weight: 300;
+}
+
+#atrisk_value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d468d;
 }

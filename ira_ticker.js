@@ -1,44 +1,51 @@
 /* Create variables to hold the economic output
    base and growth rate values */
-let output_base,
-    output_rate;
+let output_base, output_rate;
 
 /* Create variables to hold the job-days base
    and growth rate values */
-let job_days_base,
-    job_days_rate;
+let job_days_base, job_days_rate;
 
 /* Create variables to hold the labor income
    base and growth rate values */
-let labor_income_base,
-    labor_income_rate;
+let labor_income_base, labor_income_rate;
 
 // Set the base date and time
 const base_date_time = new Date("2025-04-21T16:15:00")
 
-/* Create a variable to hold the ticker values
+/* Create a variable to hold the ticker loss values
    to be loaded from the .csv below */
-let ticker_values;
+let ticker_loss_values;
+
+/* Create a variable to hold the ticker at-risk
+   values to be loaded from the .csv below */
+let ticker_atrisk_values;
 
 // Set the current agency to be "All"
 let current_agency = "All";
 
 /* Function to set the base and growth rate values for
    economic output, job-days, employment, and labor income
-   depending on which agency has been selected */
+   depending on which agency has been selected; also sets
+   the at-risk value below the drop-down depending on
+   which agency has been selected */
 function initializeIRATicker() {
 
-    // Set the economic output base and growth rate values
-    output_base = parseFloat(ticker_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["economic_output"]);
-    output_rate = parseFloat(ticker_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["economic_output"]);
+  // Set the economic output base and growth rate values
+  output_base = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["economic_output"]);
+  output_rate = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["economic_output"]);
 
-    // Set the job-days base and growth rate values
-    job_days_base = parseFloat(ticker_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["job_days"]);
-    job_days_rate = parseFloat(ticker_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["job_days"]);
+  // Set the job-days base and growth rate values
+  job_days_base = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["job_days"]);
+  job_days_rate = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["job_days"]);
 
-    // Set the labor income base and growth rate values
-    labor_income_base = parseFloat(ticker_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["labor_income"]);
-    labor_income_rate = parseFloat(ticker_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["labor_income"]);
+  // Set the labor income base and growth rate values
+  labor_income_base = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["labor_income"]);
+  labor_income_rate = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["labor_income"]);
+
+  // Update the at-risk value below the agency drop-down
+  let at_risk_value = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["at_risk"]);
+  document.getElementById("atrisk_value").innerHTML = '$' + at_risk_value.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
 
 }
 
@@ -66,35 +73,45 @@ function updateIRATicker() {
   
 }
 
-// Load the ticker values and initialize the visualization
-d3.csv("./ticker_values.csv").then(function(loaded_data) {
+// Load the ticker loss values
+d3.csv("./ticker_loss_values.csv").then(function(loaded_loss_data) {
 
-  // Store the loaded ticker values
-  ticker_values = loaded_data;
+  // Store the loaded ticker loss values
+  ticker_loss_values = loaded_loss_data;
 
-  /* Initialize the base and growth rate values for economic
-     output, job-days, employment, and labor income */
-  initializeIRATicker();
+  // Load the ticker at-risk values
+  d3.csv("./ticker_atrisk_values.csv").then(function(loaded_atrisk_data) {
+   
+    // Store the loaded ticker at-risk values
+    ticker_atrisk_values = loaded_atrisk_data;
 
-  // Update the current values within the visualizaton
-  updateIRATicker();
-
-  // Set the ticker to update every second
-  setInterval(updateIRATicker, 1000);
-
-  // Add the event listener for the drop-down menu
-  document.getElementById('ticker_agency').addEventListener('change', function(event) {
-    
-    // Store the name of the agency that was selected
-    current_agency = event.target.value;
-
-    /* Re-initialize the base and growth rate values for economic
-       output, job-days, employment, and labor income */
+    /* Initialize the base and growth rate values for economic
+       output, job-days, and labor income, and update the
+       at-risk value below the agency drop-down */
     initializeIRATicker();
 
-    // Update the current values within the visualization
+    // Update the current loss values within the visualizaton
     updateIRATicker();
-    
+
+    // Set the ticker to update every second
+    setInterval(updateIRATicker, 1000);
+
+    // Add the event listener for the drop-down menu
+    document.getElementById('ticker_agency').addEventListener('change', function(event) {
+         
+      // Store the name of the agency that was selected
+      current_agency = event.target.value;
+
+      /* Re-initialize the base and growth rate values for economic
+         output, job-days, and labor income, and update the at-risk
+         value below the agency drop-down */
+      initializeIRATicker();
+
+      // Update the current loss values within the visualization
+      updateIRATicker();
+         
+    });
+
   });
 
 });
