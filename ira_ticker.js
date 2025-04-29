@@ -27,7 +27,7 @@ let current_agency = "All";
 /* Function to set the base and growth rate values for
    economic output, job-days, employment, and labor income
    depending on which agency has been selected; also sets
-   the at-risk value below the drop-down depending on
+   the at-risk values below the drop-down depending on
    which agency has been selected */
 function initializeIRATicker() {
 
@@ -43,9 +43,21 @@ function initializeIRATicker() {
   labor_income_base = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["labor_income"]);
   labor_income_rate = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["labor_income"]);
 
-  // Update the at-risk value below the agency drop-down
-  let at_risk_value = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["at_risk"]);
-  document.getElementById("atrisk_value").innerHTML = '$' + at_risk_value.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+  // Update the total funds at risk value
+  let funds_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["funds"]);
+  document.getElementById("funds_atrisk").innerHTML = '$' + funds_atrisk.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+
+  // Update the total economic benefits at risk value
+  let output_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["economic_output"]);
+  document.getElementById("output_atrisk").innerHTML = '$' + output_atrisk.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+
+  // Update the total work days at risk value
+  let job_days_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["job_days"]);
+  document.getElementById("job_days_atrisk").innerHTML = job_days_atrisk.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+
+  // Update the total worker income at risk value
+  let labor_income_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["labor_income"]);
+  document.getElementById("labor_income_atrisk").innerHTML = '$' + labor_income_atrisk.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
 
 }
 
@@ -87,7 +99,7 @@ d3.csv("./ticker_loss_values.csv").then(function(loaded_loss_data) {
 
     /* Initialize the base and growth rate values for economic
        output, job-days, and labor income, and update the
-       at-risk value below the agency drop-down */
+       at-risk values below the agency drop-down */
     initializeIRATicker();
 
     // Update the current loss values within the visualizaton
@@ -104,7 +116,7 @@ d3.csv("./ticker_loss_values.csv").then(function(loaded_loss_data) {
 
       /* Re-initialize the base and growth rate values for economic
          output, job-days, and labor income, and update the at-risk
-         value below the agency drop-down */
+         values below the agency drop-down */
       initializeIRATicker();
 
       // Update the current loss values within the visualization
