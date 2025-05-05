@@ -43,9 +43,9 @@ function initializeIRATicker() {
   labor_income_base = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "base"))[0]["labor_income"]);
   labor_income_rate = parseFloat(ticker_loss_values.filter(d => (d.agency === current_agency && d.variable === "rate"))[0]["labor_income"]);
 
-  // Update the total funds at risk value
-  let funds_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["funds"]);
-  document.getElementById("funds_atrisk").innerHTML = '$' + funds_atrisk.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+  // Update the total funding at risk value
+  let funding_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["funding"]);
+  document.getElementById("funding_atrisk").innerHTML = '$' + funding_atrisk.toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0});
 
   // Update the total economic benefits at risk value
   let output_atrisk = parseFloat(ticker_atrisk_values.filter(d => d.agency === current_agency)[0]["economic_output"]);
