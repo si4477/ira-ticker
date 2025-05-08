@@ -2,20 +2,22 @@
 
 <html lang="en">
   <head>
-    <title>IRA Ticker</title>
+    <title>IRA At Risk</title>
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="ira_ticker.css">
+    <link rel="stylesheet" href="ira_atrisk.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
   <body>
-    <div class="ira_ticker">
-      <div id="output_label">Cost to the U.S. Economy</div>
-      <div id="output_loss"></div>
-      <div><span>Lost work days: </span><span id="job_days_loss"></span></div>
-      <div><span>Lost worker income: </span><span id="labor_income_loss"></span></div>
+    <div class="ira_atrisk">
+      <div><span id="funding_atrisk_label">Total funding at risk: </span><span id="funding_atrisk"></span></div>
+      <div class="modeled_values">
+        <div><div>Total economic cost at risk</div><div id="output_atrisk"></div></div>
+        <div><div>Total work days at risk</div><div id="job_days_atrisk"></div></div>
+        <div><div>Total worker income at risk</div><div id="labor_income_atrisk"></div></div>
+      </div>
       <div class="agency_dropdown_container">
         <label for="ticker_agency">Agency administering funds:</label>
         <div class="agency_dropdown_select_container">
@@ -32,6 +34,6 @@
         </div>
       </div>
     </div>
-    <script src="ira_ticker.js"></script>
+    <script src="ira_atrisk.js"></script>
   </body>
 </html>

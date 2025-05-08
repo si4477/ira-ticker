@@ -1,6 +1,6 @@
-.ira_ticker {
+.ira_atrisk {
   width: 100%;
-  max-width: 750px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 30px 0px;
   display: flex;
@@ -11,35 +11,54 @@
   font-size: 26px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   color: #6e6c6b;
 }
 
-#output_label {
-  font-size: 60px;
-  font-weight: 700;
+#funding_atrisk_label {
+  font-size: 22px;
+  font-weight: 500;
 }
 
-#output_loss {
-  margin-bottom: 50px;
-  color: #1d468d;
-  font-size: 50px;
+#funding_atrisk {
+  font-size: 24px;
   font-weight: 700;
+  color: #1d468d;
 }
 
-#job_days_loss {
-  color: #1d468d;
-  font-weight: 700;
+.modeled_values {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: 25px 0px 40px 0px;
 }
 
-#labor_income_loss {
+.modeled_values > div {
+  width: 200px;
+  margin: 10px;
+}
+
+.modeled_values > div > div:first-child {
+  width: 130px;
+  margin: 0px auto 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #f2f0ef;
   color: #1d468d;
+}
+
+#output_atrisk,
+#job_days_atrisk,
+#labor_income_atrisk {
+  font-size: 20px;
   font-weight: 700;
+  color: #1d468d;
 }
 
 .agency_dropdown_container {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
