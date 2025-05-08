@@ -22,9 +22,7 @@ let current_agency = "All";
 
 /* Function to set the base and growth rate values for
    economic output, job-days, employment, and labor income
-   depending on which agency has been selected; also sets
-   the at-risk values below the drop-down depending on
-   which agency has been selected */
+   depending on which agency has been selected */
 function initializeIRATicker() {
 
   // Set the economic output base and growth rate values
@@ -72,8 +70,7 @@ d3.csv("./ticker_loss_values.csv").then(function(loaded_loss_data) {
   ticker_loss_values = loaded_loss_data;
 
   /* Initialize the base and growth rate values for economic
-     output, job-days, and labor income, and update the
-     at-risk values below the agency drop-down */
+     output, job-days, and labor income */
   initializeIRATicker();
 
   // Update the current loss values within the visualizaton
@@ -89,8 +86,7 @@ d3.csv("./ticker_loss_values.csv").then(function(loaded_loss_data) {
     current_agency = event.target.value;
 
     /* Re-initialize the base and growth rate values for economic
-       output, job-days, and labor income, and update the at-risk
-       values below the agency drop-down */
+       output, job-days, and labor income */
     initializeIRATicker();
 
     // Update the current loss values within the visualization

@@ -16,13 +16,20 @@
   color: #6e6c6b;
 }
 
+#output_container {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #output_label {
   font-size: 60px;
   font-weight: 700;
 }
 
 #output_loss {
-  margin-bottom: 50px;
   color: #1d468d;
   font-size: 50px;
   font-weight: 700;
@@ -74,4 +81,41 @@
   color: #1d468d;
   pointer-events: none;
   font-size: 12px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #6e6c6b;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 300px;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 20px);
+  left: 50%;
+  margin-left: -150px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #6e6c6b transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
