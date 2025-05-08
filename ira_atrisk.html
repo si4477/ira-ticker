@@ -12,11 +12,27 @@
   </head>
   <body>
     <div class="ira_atrisk">
-      <div><span id="funding_atrisk_label">Total funding at risk: </span><span id="funding_atrisk"></span></div>
+      <div class="tooltip">
+        <span id="funding_atrisk_label">Total funding at risk: </span>
+        <span id="funding_atrisk"></span>
+        <span class="tooltiptext">This amount of funding for IRA programs has not yet been disbursed, leaving this funding vulnerable to further delay or cancellation.</span>
+      </div>
       <div class="modeled_values">
-        <div><div>Total economic cost at risk</div><div id="output_atrisk"></div></div>
-        <div><div>Total work days at risk</div><div id="job_days_atrisk"></div></div>
-        <div><div>Total worker income at risk</div><div id="labor_income_atrisk"></div></div>
+        <div class="tooltip">
+          <div>Total economic cost at risk</div>
+          <div id="output_atrisk"></div>
+          <span class="tooltiptext">IRA programs that have not yet been disbursed could create this amount in economic benefits across the United States.</span>
+        </div>
+        <div class="tooltip">
+          <div>Total work days at risk</div>
+          <div id="job_days_atrisk"></div>
+          <span class="tooltiptext">IRA programs that have not yet been disbursed could support this many job-days across the United States.</span>
+        </div>
+        <div class="tooltip">
+          <div>Total worker income at risk</div>
+          <div id="labor_income_atrisk"></div>
+          <span class="tooltiptext">IRA programs that have not yet been disbursed could support this much in labor income across the United States.</span>
+        </div>
       </div>
       <div class="agency_dropdown_container">
         <label for="ticker_agency">Agency administering funds:</label>

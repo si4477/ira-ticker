@@ -94,3 +94,40 @@
   pointer-events: none;
   font-size: 12px;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #6e6c6b;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 300px;
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 20px);
+  left: 50%;
+  margin-left: -150px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #6e6c6b transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

@@ -5,10 +5,7 @@ let ticker_atrisk_values;
 // Set the current agency to be "All"
 let current_agency = "All";
 
-/* Function to set the base and growth rate values for
-   economic output, job-days, employment, and labor income
-   depending on which agency has been selected; also sets
-   the at-risk values below the drop-down depending on
+/* Function to set the at-risk values depending on
    which agency has been selected */
 function initializeIRATicker() {
 
@@ -30,31 +27,24 @@ function initializeIRATicker() {
 
 }
 
-  // Load the ticker at-risk values
-  d3.csv("./ticker_atrisk_values.csv").then(function(loaded_atrisk_data) {
+// Load the at-risk values
+d3.csv("./ticker_atrisk_values.csv").then(function(loaded_atrisk_data) {
    
-    // Store the loaded ticker at-risk values
-    ticker_atrisk_values = loaded_atrisk_data;
+  // Store the loaded ticker at-risk values
+  ticker_atrisk_values = loaded_atrisk_data;
 
-    /* Initialize the base and growth rate values for economic
-       output, job-days, and labor income, and update the
-       at-risk values below the agency drop-down */
+  // Update the at-risk values in the visualization
+  initializeIRATicker();
+
+  // Add the event listener for the drop-down menu
+  document.getElementById('ticker_agency').addEventListener('change', function(event) {
+         
+    // Store the name of the agency that was selected
+    current_agency = event.target.value;
+
+    // Update the at-risk values
     initializeIRATicker();
-
-
-
-    // Add the event listener for the drop-down menu
-    document.getElementById('ticker_agency').addEventListener('change', function(event) {
          
-      // Store the name of the agency that was selected
-      current_agency = event.target.value;
-
-      /* Re-initialize the base and growth rate values for economic
-         output, job-days, and labor income, and update the at-risk
-         values below the agency drop-down */
-      initializeIRATicker();
-         
-    });
-
   });
 
+});
