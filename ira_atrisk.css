@@ -147,7 +147,7 @@ body {
 @media (max-width: 800px) {
   .ira_atrisk {
     box-sizing: border-box;
-    width: 100%;
+    width: 95%;
     padding: 20px;
   }
 
@@ -209,7 +209,7 @@ body {
   }
 
   .tooltip .tooltiptext {
-    width: 150px;
-    margin-left: -75px;
+    width: 130px;
+    margin-left: -65px;
   }
 }
