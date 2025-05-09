@@ -22,9 +22,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #output_label {
+  margin-bottom: 10px;
   font-size: 60px;
   font-weight: 700;
 }
@@ -118,4 +120,24 @@
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .ira_ticker {
+    font-size: 5vw;
+  }
+
+  #output_label {
+    font-size: 10vw;
+  }
+  
+  #output_loss {
+    font-size: 8vw;
+  }
+  
+  #job_days_loss,
+  #labor_income_loss {
+    font-size: 5vw;  
+  }
+  
 }
