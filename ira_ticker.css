@@ -122,7 +122,42 @@
   visibility: visible;
 }
 
+/* Intermediate sizes for screen widths between
+   400px and 800px; this aims for the ticker
+   height to be less than 500px */
 @media (max-width: 800px) {
+  .ira_ticker {
+    font-size: 4vw;
+  }
+
+  #output_label {
+    font-size: 8vw;
+  }
+  
+  #output_loss {
+    font-size: 6vw;
+  }
+  
+  #job_days_loss,
+  #labor_income_loss {
+    font-size: 4vw;
+  }
+
+  .agency_dropdown_container label {
+    font-size: 3vw;
+  }
+
+  .agency_dropdown_container select {
+    width: 60px;
+    font-size: 2vw;
+  }
+
+}
+
+/* Sizes for screen widths smaller than 400px;
+   these will also achieve ticker height less
+   than 500px */
+@media (max-width: 400px) {
   .ira_ticker {
     font-size: 5vw;
   }
@@ -137,7 +172,7 @@
   
   #job_days_loss,
   #labor_income_loss {
-    font-size: 5vw;  
+    font-size: 5vw;
   }
 
   .agency_dropdown_container label {
@@ -145,6 +180,7 @@
   }
 
   .agency_dropdown_container select {
+    width: 60px;
     font-size: 3vw;
   }
 
