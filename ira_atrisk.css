@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .ira_atrisk {
   width: 100%;
   max-width: 700px;
