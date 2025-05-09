@@ -194,12 +194,12 @@ body {
   }
 
   .agency_dropdown_container label {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .agency_dropdown_container select {
     width: 70px;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .agency_dropdown_select_container::after {
