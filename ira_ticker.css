@@ -128,16 +128,28 @@
   }
 
   #output_label {
-    font-size: 10vw;
+    font-size: 12vw;
   }
   
   #output_loss {
-    font-size: 8vw;
+    font-size: 10vw;
   }
   
   #job_days_loss,
   #labor_income_loss {
     font-size: 5vw;  
   }
-  
+
+  .agency_dropdown_container label {
+    font-size: 4vw;
+  }
+
+  .agency_dropdown_container select {
+    font-size: 3vw;
+  }
+
+  .tooltip .tooltiptext {
+    width: 250px;
+    margin-left: -125px;
+  }
 }
