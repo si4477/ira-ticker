@@ -88,6 +88,7 @@
 .tooltip {
   position: relative;
   display: inline-block;
+  cursor: help;
 }
 
 .tooltip .tooltiptext {
@@ -105,6 +106,7 @@
   top: calc(100% + 20px);
   left: 50%;
   margin-left: -150px;
+  pointer-events: none;
 }
 
 .tooltip .tooltiptext::after {
@@ -148,7 +150,7 @@
   }
 
   .agency_dropdown_container select {
-    width: 60px;
+    width: 70px;
     font-size: 2vw;
   }
 
@@ -180,7 +182,7 @@
   }
 
   .agency_dropdown_container select {
-    width: 60px;
+    width: 70px;
     font-size: 3vw;
   }
 

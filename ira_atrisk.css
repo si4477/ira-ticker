@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 30px 0px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,8 @@
   font-weight: 400;
   font-style: normal;
   color: #6e6c6b;
+  border: 4px solid #002F65;
+  border-radius: 75px 0px;
 }
 
 #funding_atrisk_label {
@@ -30,6 +32,9 @@
 .modeled_values {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
   margin: 25px 0px 40px 0px;
 }
@@ -98,6 +103,7 @@
 .tooltip {
   position: relative;
   display: inline-block;
+  cursor: help;
 }
 
 .tooltip .tooltiptext {
@@ -115,6 +121,7 @@
   top: calc(100% + 20px);
   left: 50%;
   margin-left: -150px;
+  pointer-events: none;
 }
 
 .tooltip .tooltiptext::after {
@@ -130,4 +137,64 @@
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media (max-width: 800px) {
+  .ira_atrisk {
+    width: 80%;
+    padding: 20px;
+  }
+
+  #funding_atrisk_label {
+    font-size: 2.5vw;
+  }
+
+  #funding_atrisk {
+    font-size: 2.5vw;
+  }
+
+  .modeled_values {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .modeled_values > div {
+    width: 40%;
+  }
+
+  .modeled_values > div > div:first-child {
+    width: fit-content;
+    font-size: 2vw;
+  }
+
+  #output_atrisk,
+  #job_days_atrisk,
+  #labor_income_atrisk {
+    font-size: 2.5vw;
+  }
+
+  .agency_dropdown_container label {
+    font-size: 2vw;
+  }
+
+  .agency_dropdown_container select {
+    width: 70px;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .agency_dropdown_container label {
+    font-size: 4vw;
+  }
+
+  .agency_dropdown_container select {
+    width: 70px;
+    font-size: 3vw;
+  }
+
+  .tooltip .tooltiptext {
+    width: 250px;
+    margin-left: -125px;
+  }
 }
