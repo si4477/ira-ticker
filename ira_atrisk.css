@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,7 +141,7 @@
 
 @media (max-width: 800px) {
   .ira_atrisk {
-    width: 80%;
+    width: 90%;
     padding: 20px;
   }
 
@@ -183,18 +183,18 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
   .agency_dropdown_container label {
-    font-size: 4vw;
+    font-size: 2vw;
   }
 
   .agency_dropdown_container select {
     width: 70px;
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .tooltip .tooltiptext {
-    width: 250px;
-    margin-left: -125px;
+    width: 200px;
+    margin-left: -100px;
   }
 }
