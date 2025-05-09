@@ -146,7 +146,8 @@ body {
 
 @media (max-width: 800px) {
   .ira_atrisk {
-    width: 90%;
+    box-sizing: border-box;
+    width: 100%;
     padding: 20px;
   }
 
@@ -199,6 +200,7 @@ body {
 
   .agency_dropdown_container select {
     width: 70px;
+    padding: 8px;
     font-size: 2.5vw;
   }
 
