@@ -207,7 +207,7 @@ body {
   }
 
   .tooltip .tooltiptext {
-    width: 200px;
-    margin-left: -100px;
+    width: 150px;
+    margin-left: -75px;
   }
 }
