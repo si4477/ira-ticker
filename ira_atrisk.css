@@ -184,12 +184,20 @@
 }
 
 @media (max-width: 550px) {
+  .ira_atrisk {
+    padding: 20px 0px;
+  }
+
   .agency_dropdown_container label {
     font-size: 2vw;
   }
 
   .agency_dropdown_container select {
     width: 70px;
+    font-size: 2vw;
+  }
+
+  .agency_dropdown_select_container::after {
     font-size: 2vw;
   }
 
