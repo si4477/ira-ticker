@@ -11,7 +11,7 @@ let job_days_base, job_days_rate;
 let labor_income_base, labor_income_rate;
 
 // Set the base date and time
-const base_date_time = new Date("2025-04-21T16:15:00")
+const base_date_time = new Date("2025-05-12T09:27:00")
 
 /* Create a variable to hold the ticker loss values
    to be loaded from the .csv below */
