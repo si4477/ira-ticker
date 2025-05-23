@@ -152,11 +152,11 @@ body {
   }
 
   #funding_atrisk_label {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   #funding_atrisk {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .modeled_values {
@@ -170,13 +170,13 @@ body {
 
   .modeled_values > div > div:first-child {
     width: fit-content;
-    font-size: 2vw;
+    font-size: 3vw;
   }
 
   #output_atrisk,
   #job_days_atrisk,
   #labor_income_atrisk {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .agency_dropdown_container label {
