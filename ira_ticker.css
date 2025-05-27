@@ -98,7 +98,8 @@ body {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 300px;
+  width: 320px;
+  box-sizing: border-box;
   background-color: #6e6c6b;
   color: #fff;
   text-align: center;
@@ -192,7 +193,7 @@ body {
   }
 
   .tooltip .tooltiptext {
-    width: 250px;
-    margin-left: -125px;
+    width: 270px;
+    margin-left: -135px;
   }
 }
